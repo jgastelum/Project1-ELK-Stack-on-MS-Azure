@@ -1,0 +1,1 @@
+sudo deluser --remove-home jack

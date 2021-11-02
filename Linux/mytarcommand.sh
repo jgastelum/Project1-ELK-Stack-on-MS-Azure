@@ -1,0 +1,11 @@
+    - Command: `tar cvvWf 20190505epscript.tar epscript/ > 20190505epscript.txt`
+
+    - Syntax breakdown:
+      - `tar`: the name of the command.
+      - `c`: creates the archive.
+      - `vv`: **very verbose**, or verbosity level 2, prints the full file specification for each file in the archive.  
+      - `W`: verifies the archive after writing it.
+      - `f`: specifies the **filename** for our archive.
+      -  `20190505epscript.tar`: the archive filename that we created following the ISO 8601 guidelines.
+      - `epscript/*`: the directory that contains all of the files to archive. We use the asterisk `*` wildcard to denote that we want everything in this directory and all of its subdirectories.
+      - `> 20190505epscript.txt`: saves the output of the command to the the `20190505epscript.txt` text file.
