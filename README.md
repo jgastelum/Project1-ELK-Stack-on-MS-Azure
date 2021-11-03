@@ -100,8 +100,6 @@ SSH into the control node and follow the steps below:
 
 - Run the playbook, and navigate to http://[your.ELK-VMExternal.IP]:5601/app/kibana to check that the installation worked as expected.
 
-![](Images/Kabanainitialpage.png)
-
 - Which file is the playbook? Where do you copy it?
  The playbook is filebeat-config.yml and curl command is needed to get the filebeat-config to forward it into the correct directory on the Jump-Box Provisioner.
 
@@ -145,7 +143,7 @@ dreamy_satoshi
 6  nano /etc/ansible/ansible.cfg (update remote user to the user name that you created for the public key for Microsoft Azure based on the Elk-Server VM machine)
 7. nano /etc/ansible/elk-install.yml (create the YML file for the  ELK installation) 
 
-![](Ansible/elk-install.yml)
+[](Ansible/elk-install.yml)
 
 8. ansible all -m ping (to ensure configurations and connection to the ELK-Server VM is successful)
 9. ansible-playbook /etc/ansible/install-elk.yml (Deploy the elk installation to the internal private VM machines)
@@ -171,7 +169,7 @@ dreamy_satoshi
 8. ansible all -m ping
 9. ansible-playbook /etc/ansible/filebeat-playbook.yml (deploys the metricbeat agent installation to the internal private VM machines)
 
-![](Ansible/filebeat-playbook.yml)
+[](Ansible/filebeat-playbook.yml)
 
 Steps to installing metricbeat
 
