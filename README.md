@@ -1,8 +1,8 @@
-##Automated ELK Stack Deployment
+Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
 
-(Images/RedTeamNetworkwithElkStack.png)
+![](Images/RedTeamNetworkwithElkStack.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -75,7 +75,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-(Images/elkinstance.png)
+![](Images/elkinstance.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -101,7 +101,7 @@ SSH into the control node and follow the steps below:
 
 - Run the playbook, and navigate to http://[your.ELK-VMExternal.IP]:5601/app/kibana to check that the installation worked as expected.
 
-(Images/Kabanainitialpage.png)
+![](Images/Kabanainitialpage.png)
 
 - Which file is the playbook? Where do you copy it?
  The playbook is filebeat-config.yml and curl command is needed to get the filebeat-config to forward it into the correct directory on the Jump-Box Provisioner.
@@ -146,7 +146,7 @@ dreamy_satoshi
 6  nano /etc/ansible/ansible.cfg (update remote user to the user name that you created for the public key for Microsoft Azure based on the Elk-Server VM machine)
 7. nano /etc/ansible/elk-install.yml (create the YML file for the  ELK installation) 
 
-(Ansible/elk-install.yml)
+![](Ansible/elk-install.yml)
 
 8. ansible all -m ping (to ensure configurations and connection to the ELK-Server VM is successful)
 9. ansible-playbook /etc/ansible/install-elk.yml (Deploy the elk installation to the internal private VM machines)
@@ -172,7 +172,7 @@ dreamy_satoshi
 8. ansible all -m ping
 9. ansible-playbook /etc/ansible/filebeat-playbook.yml (deploys the metricbeat agent installation to the internal private VM machines)
 
-(Ansible/filebeat-playbook.yml)
+![](Ansible/filebeat-playbook.yml)
 
 Steps to installing metricbeat
 
@@ -192,8 +192,7 @@ dreamy_satoshi
 6. nano /etc/ansible/metricbeat-config.yml (update this file to ELK Server IP 10.1.0.6 under "hosts for setup.kibana" and under "hosts within output.elasticsearch:")
 7. nano /etc/ansible/metricbeat-playbook.yml (metricbeat setup for the internal IP VM machines)
 
-(Ansible/metricbeat-playbook.yml)
+![](Ansible/metricbeat-playbook.yml)
 
 8. ansible all -m ping (to ensure all configuration and connections are fine for metricbeat setup)
 9. ansible-playbook /etc/ansible/metricbeat-playbook.yml (deploys the metricbeat agent installation to the internal private VM machines)
-
