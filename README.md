@@ -140,7 +140,7 @@ dreamy_satoshi
 [elk]
 10.1.0.6 ansible_python_interpreter=/usr/bin/python3
 
-6  nano /etc/ansible/ansible.cfg (update remote user to the user name that you created for the public key for Microsoft Azure based on the Elk-Server VM machine)
+6. nano /etc/ansible/ansible.cfg (update remote user to the user name that you created for the public key for Microsoft Azure based on the Elk-Server VM machine)
 7. nano /etc/ansible/elk-install.yml (create the YML file for the  ELK installation) 
 
 [elk-install](Ansible/elk-install.yml)
